@@ -1,0 +1,6 @@
+# read the data with starting with S.N 
+count_table<- read.csv("raw_counts.csv", header = TRUE)
+
+# remove SN and make first row as true rowname
+rownames(count_table) <- count_table[,1] 
+count_table <- count_table[,-1] 
